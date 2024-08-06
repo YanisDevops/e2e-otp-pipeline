@@ -1,0 +1,2 @@
+sample_email_1@example.com
+sample_email_2@example.com
