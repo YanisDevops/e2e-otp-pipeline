@@ -8,17 +8,17 @@ End to End OTP Pipeline Project using Docker, Airflow, Kafka, KafkaUI, Cassandra
 Project contains 3 Kafka brokers, UI for Apache Kafka, Zookeeper, Cassandra, Mongo, Mongo-Express, airflow-init, postgres, airflow-webserver, airflow-scheduler, airflow-triggerer, airflow-cli containers.
 
 The Pipeline performs 
-1. creating a kafka topic named email_topic with 3 partitions, write an email address at a time triggered by user. \
-2. creating cassandra keyspace and table named email_namespace and email_table and consuming kafka topic messages into cassandra.\
-3. creating mongodb database and collection named email_database and email_collection and consuming topic messages into mongodb. \
+1. creating a kafka topic named email_topic with 3 partitions, write an email address at a time triggered by user.
+2. creating cassandra keyspace and table named email_namespace and email_table and consuming kafka topic messages into cassandra.
+3. creating mongodb database and collection named email_database and email_collection and consuming topic messages into mongodb.
 4. checking existence of the email and otp code in these two databases and pushing email notifications, slack channel messages and discord messages simultaneously.
 
 ## Configuring Email Notifications in Airflow
 
 ### Obtain an App Password for your Microsoft Account:
 
-- Go to the Security tab and select Manage how I sign in to Microsoft. \
-- Create a new app password as instructed. \
+- Go to the Security tab and select Manage how I sign in to Microsoft.
+- Create a new app password as instructed.
 - For detailed guidance, refer to the [Microsoft support article](https://support.microsoft.com/en-us/account-billing/how-to-get-and-use-app-passwords-5896ed9b-4263-e681-128a-a6f2979a7944).
 
 #### Update docker-compose.yaml file
@@ -33,24 +33,24 @@ AIRFLOW__SMTP__SMTP_SSL='False' \
 AIRFLOW__SMTP__SMTP_TIMEOUT='5' \
 AIRFLOW__SMTP__SMTP_RETRY_LIMIT='3' 
 
-## Setting up receiver emails using using [MailSlurp](https://www.mailslurp.com/).
+### Setting up receiver emails using using [MailSlurp](https://www.mailslurp.com/).
 - Sign up for a free account. \
 - From inboxes section create several temporary email addresses. \
 - In the emails section find and copy the email addresses into email_list.txt file in your project directory before running.
 
 ## Setting up Slack
 
-- Go to your apps section of [Slack api website](https://api.slack.com/apps). \
-- Create an app from scratch. \
-- Assign the app to your workspace. \
-- After creating your app, go to incoming webhooks section from dropdown menu and toggle Activate Incoming Webhooks. \
-- Go to bottom of the page and add new webhook to workspace, assign it to data-engineering channel. \
-- In the Webhook URL section, you can copy your information, that will be used in airflow connection setup. \
+- Go to your apps section of [Slack api website](https://api.slack.com/apps).
+- Create an app from scratch.
+- Assign the app to your workspace.
+- After creating your app, go to incoming webhooks section from dropdown menu and toggle Activate Incoming Webhooks.
+- Go to bottom of the page and add new webhook to workspace, assign it to data-engineering channel.
+- In the Webhook URL section, you can copy your information, that will be used in airflow connection setup.
 
 ## Setting up Discord
 
-- Go to Discord Web or Desktop [Application](https://discord.com/). \
-- Create a server at the bottom of the lef pane of servers, for create my own, for me and for my friends, name it whatever you want. \
+- Go to Discord Web or Desktop [Application](https://discord.com/).
+- Create a server at the bottom of the lef pane of servers, for create my own, for me and for my friends, name it whatever you want.
 - Forward to Server Settings, Go to Apps/Integrations/Webhooks, Create Webhook. That will create a default webhook. Copy Webhook URL, and store it for airflow connection setup.
 
 
