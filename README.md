@@ -33,12 +33,12 @@ AIRFLOW__SMTP__SMTP_SSL='False' \
 AIRFLOW__SMTP__SMTP_TIMEOUT='5' \
 AIRFLOW__SMTP__SMTP_RETRY_LIMIT='3' 
 
-### Setting up receiver emails using using [MailSlurp](https://www.mailslurp.com/).
+## Setting up receiver emails using using [MailSlurp](https://www.mailslurp.com/).
 - Sign up for a free account. \
 - From inboxes section create several temporary email addresses. \
 - In the emails section find and copy the email addresses into email_list.txt file in your project directory before running.
 
-### Setting up Slack
+## Setting up Slack
 
 - Go to your apps section of [Slack api website](https://api.slack.com/apps). \
 - Create an app from scratch. \
@@ -47,7 +47,7 @@ AIRFLOW__SMTP__SMTP_RETRY_LIMIT='3'
 - Go to bottom of the page and add new webhook to workspace, assign it to data-engineering channel. \
 - In the Webhook URL section, you can copy your information, that will be used in airflow connection setup. \
 
-### Setting up Discord
+## Setting up Discord
 
 - Go to Discord Web or Desktop [Application](https://discord.com/). \
 - Create a server at the bottom of the lef pane of servers, for create my own, for me and for my friends, name it whatever you want. \
@@ -58,7 +58,7 @@ AIRFLOW__SMTP__SMTP_RETRY_LIMIT='3'
 
 `$ ./docker_run.sh`
 
-##### This will create required uid variable, network named cassandra-kafka and initialize the postgres database that holds the airflow metadata, download the container images and finally start the project containers which will be orchestrated by airflow.
+**This will create required uid variable, network named cassandra-kafka and initialize the postgres database that holds the airflow metadata, download the container images and finally start the project containers which will be orchestrated by airflow.**
 
 #### WebUI Links:
 
@@ -94,3 +94,5 @@ Webhook Endpoint        : webhooks/{webhook.id}/{webhook.token} (found in the we
 ### Trigger the main_dag several times.
 
 **Once you triggered the dag you can track created kafka messages from [kafkaui](http://localhost:8888), data inserted into cassandra table using cassandra shell (cqlsh) and inserted documents into mongodb from [mongo-express-ui](http://localhost:8082)**
+
+**Feel free to visit for extensive explanation of project in my [Medium post](https://medium.com/@akarce/end-to-end-data-engineering-project-airflow-kafka-cassandra-mongodb-docker-emailoperator-07d48d27bee2)**
