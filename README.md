@@ -34,8 +34,8 @@ AIRFLOW__SMTP__SMTP_TIMEOUT='5' \
 AIRFLOW__SMTP__SMTP_RETRY_LIMIT='3' 
 
 ### Setting up receiver emails using using [MailSlurp](https://www.mailslurp.com/).
-- Sign up for a free account. \
-- From inboxes section create several temporary email addresses. \
+- Sign up for a free account.
+- From inboxes section create several temporary email addresses.
 - In the emails section find and copy the email addresses into email_list.txt file in your project directory before running.
 
 ## Setting up Slack
