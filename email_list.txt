@@ -1,2 +1,6 @@
-sample_email_1@example.com
-sample_email_2@example.com
+ba43e87b-0011-4f74-a914-542b3d3adccc@mailslurp.net
+a48e1175-5861-473a-8e24-0f8d89faf52b@mailslurp.net
+ca1bc809-40d2-475c-8d0d-a96d73cacd06@mailslurp.net
+d36f6e56-6422-4707-946b-1215956502ec@mailslurp.net
+b6241273-9e9e-4c35-945a-932e700030a8@mailslurp.net
+d172df58-e1ad-4e0d-9569-453f816011ba@mailslurp.net
