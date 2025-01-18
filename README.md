@@ -93,6 +93,4 @@ Webhook Endpoint        : webhooks/{webhook.id}/{webhook.token} (found in the we
 
 ### Trigger the main_dag several times.
 
-**Once you triggered the dag you can track created kafka messages from [kafkaui](http://localhost:8888), data inserted into cassandra table using cassandra shell (cqlsh) and inserted documents into mongodb from [mongo-express-ui](http://localhost:8082)**
-
-**Feel free to visit for extensive explanation of project in my [Medium post](https://medium.com/@akarce/end-to-end-data-engineering-project-airflow-kafka-cassandra-mongodb-docker-emailoperator-07d48d27bee2)**
+**Once you triggered the dag you can track created kafka messages from [kafka-ui](http://localhost:8888), data inserted into cassandra table using cassandra shell (cqlsh) and inserted documents into mongodb from [mongo-express-ui](http://localhost:8082)**
